@@ -85,7 +85,11 @@ var CommentsService = /** @class */ (function () {
         return Comment_1.CommentItem.create(newComment);
     };
     CommentsService.prototype.handleFile = function (file) {
-        var filePath = path.resolve('./loaded_files/', Date.now() + '.' + file[1]);
+        // const filePath = path.resolve(
+        //   './loaded_files/', 
+        //   Date.now() + '.' + file[1]
+        // );
+        var filePath = './loaded_files/' + Date.now() + '.' + file[1];
         var fileData = file[0];
         var base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
         fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
