@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tsc main.ts && nodemon main.js",
+    "start": "npx tsc main.ts && node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
