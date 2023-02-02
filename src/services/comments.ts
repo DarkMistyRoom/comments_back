@@ -49,10 +49,10 @@ class CommentsService {
 
     const filePath = './loaded_files/' + Date.now() + '.' + file[1];
 
-    const fileData = file[0];
-    const base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
+    // const fileData = file[0];
+    // const base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
 
-    fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
+    // fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
 
     return filePath;
   }
