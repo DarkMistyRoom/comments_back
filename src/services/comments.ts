@@ -2,8 +2,8 @@
 
 import { Op, OrderItem, Optional } from "sequelize";
 import { CommentItem } from '../models/Comment';
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 
 class CommentsService {
   public async getAll(parentId: any, offsetCoef: number, countPerPage: number, order: OrderItem) {
@@ -42,14 +42,14 @@ class CommentsService {
   }
 
   private handleFile(file) {
-    const filePath = path.resolve(
-      './loaded_files/', 
-      Date.now() + '.' + file[1]
-    );
+    // const filePath = path.resolve(
+    //   './loaded_files/', 
+    //   Date.now() + '.' + file[1]
+    // );
+   
+
+    const filePath = './loaded_files/' + Date.now() + '.' + file[1];
     console.log(filePath);
-
-    // const filePath = './loaded_files/' + Date.now() + '.' + file[1];
-
     // const fileData = file[0];
     // const base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
 
