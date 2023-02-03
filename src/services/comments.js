@@ -39,8 +39,8 @@ exports.__esModule = true;
 exports.commentsService = void 0;
 var sequelize_1 = require("sequelize");
 var Comment_1 = require("../models/Comment");
-// const fs = require('fs');
-// const path = require('path');
+var fs = require('fs');
+var path = require('path');
 var CommentsService = /** @class */ (function () {
     function CommentsService() {
     }
@@ -85,15 +85,10 @@ var CommentsService = /** @class */ (function () {
         return Comment_1.CommentItem.create(newComment);
     };
     CommentsService.prototype.handleFile = function (file) {
-        // const filePath = path.resolve(
-        //   './loaded_files/', 
-        //   Date.now() + '.' + file[1]
-        // );
-        var filePath = './loaded_files/' + Date.now() + '.' + file[1];
-        console.log(filePath);
-        // const fileData = file[0];
-        // const base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
-        // fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
+        var filePath = path.resolve('./loaded_files/', Date.now() + '.' + file[1]);
+        var fileData = file[0];
+        var base64Data = fileData.replace(/^data:([A-Za-z-+/]+);base64,/, '');
+        fs.writeFileSync(filePath, base64Data, { encoding: 'base64' });
         return filePath;
     };
     return CommentsService;
