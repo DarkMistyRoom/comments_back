@@ -34,7 +34,7 @@ var Server = /** @class */ (function () {
     };
     Server.prototype.listen = function () {
         this.app.listen(this.port, function () {
-            console.log('Server is running on localhost:5000');
+            // console.log('Server is running on localhost:5000');
         });
     };
     return Server;

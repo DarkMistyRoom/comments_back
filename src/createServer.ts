@@ -44,7 +44,7 @@ export class Server {
 
   private listen() {
     this.app.listen(this.port, () => {
-      console.log('Server is running on localhost:5000');
+      // console.log('Server is running on localhost:5000');
     })
   }
 }
